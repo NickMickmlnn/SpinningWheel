@@ -85,38 +85,38 @@ h1 {
   border-radius: 50%;
   position: relative;
   transition: transform 4s cubic-bezier(0.17, 0.67, 0.2, 0.98);
+  background: conic-gradient(
+    #fbbf24 0deg 30deg,
+    #3b82f6 30deg 60deg,
+    #60a5fa 60deg 90deg,
+    #2563eb 90deg 120deg,
+    #60a5fa 120deg 150deg,
+    #3b82f6 150deg 180deg,
+    #f59e0b 180deg 210deg,
+    #3b82f6 210deg 240deg,
+    #60a5fa 240deg 270deg,
+    #2563eb 270deg 300deg,
+    #60a5fa 300deg 330deg,
+    #3b82f6 330deg 360deg
+  );
 }
 
-.slice {
+.label {
   position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform-origin: 0% 100%;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 140px;
+  transform-origin: center left;
   font-weight: 700;
   color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
   font-size: clamp(0.6rem, 1.7vw, 0.95rem);
-  padding: 12px 8px 0;
-}
-
-.slice span {
-  width: 140px;
-  transform: rotate(90deg);
   text-align: center;
+  pointer-events: none;
 }
 
-.slice.vip {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 45%, #d97706 100%);
-}
-
-.slice.try-again {
-  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 55%, #1d4ed8 100%);
+.label.vip {
+  color: #1f2937;
 }
 
 .spin-button {

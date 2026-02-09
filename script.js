@@ -24,17 +24,15 @@ let isSpinning = false;
 
 const createSlices = () => {
   slices.forEach((label, index) => {
-    const slice = document.createElement("div");
     const isVip = label === "VIP Badge Winner!";
+    const labelEl = document.createElement("div");
+    const angle = index * sliceAngle + sliceAngle / 2;
 
-    slice.className = `slice ${isVip ? "vip" : "try-again"}`;
-    slice.style.transform = `rotate(${index * sliceAngle}deg) skewY(${90 - sliceAngle}deg)`;
+    labelEl.className = `label ${isVip ? "vip" : "try-again"}`;
+    labelEl.style.transform = `rotate(${angle}deg) translateX(40%) rotate(${-angle}deg)`;
+    labelEl.textContent = label;
 
-    const text = document.createElement("span");
-    text.textContent = label;
-    slice.appendChild(text);
-
-    wheelSlices.appendChild(slice);
+    wheelSlices.appendChild(labelEl);
   });
 };
 
