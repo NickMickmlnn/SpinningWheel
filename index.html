@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spin to Win a VIP Badge!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <h1>Spin to Win a VIP Badge!</h1>
+
+    <section class="wheel-area">
+      <div class="pointer" aria-hidden="true"></div>
+      <div class="wheel" id="wheel" aria-label="Prize wheel">
+        <div class="wheel-slices" id="wheelSlices"></div>
+      </div>
+    </section>
+
+    <button class="spin-button" id="spinButton" type="button">SPIN</button>
+
+    <p class="result" id="resultMessage" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
